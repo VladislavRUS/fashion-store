@@ -1,0 +1,63 @@
+.vendors {
+    margin-bottom: 120px;
+    
+    &__list {
+        margin: 0 auto;
+        max-width: 807px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &-item {
+            &._calvin-klen {
+                width: 122px;
+                height: 20px;
+            }
+
+            &._chanel {
+                width: 126px;
+                height: 21px;
+            }
+
+            &._dolce-gabbana {
+                width: 160px;
+                height: 17px;
+            }
+
+            &._guess {
+                width: 78px;
+                height: 20px;
+            }
+
+            &._prada {
+                width: 124px;
+                height: 20px;
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 1199px) {
+    .vendors {
+        &__list {
+            flex-wrap: wrap;
+            padding: 0 20px;
+            justify-content: space-between;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .vendors {
+        &__list {
+            flex-direction: column;
+
+            &-item {
+                &:not(:last-child) {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}

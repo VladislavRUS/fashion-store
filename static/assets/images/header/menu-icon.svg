@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="28" height="26" viewBox="0 0 28 26">
+<defs>
+<path id="svg-menu-icon" d="M376 24a1 1 0 0 1 0-2h26a1 1 0 0 1 1 1 1 1 0 0 1-1 1zm0 8a1 1 0 0 1 0-2h18a1 1 0 0 1 0 2zm15 14a1 1 0 0 1 0 2h-15a1 1 0 0 1 0-2zm11-8a1 1 0 0 1 0 2h-26a1 1 0 1 1 0-2z"/>
+</defs>
+<g transform="translate(-375 -22)">
+<use xlink:href="#svg-menu-icon"/>
+</g>
+</svg>

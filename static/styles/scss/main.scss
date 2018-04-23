@@ -1,0 +1,12 @@
+@import '../../../node_modules/reset-css/_reset';
+
+@import 'common/variables';
+@import 'common/common';
+@import 'fonts/fonts';
+
+@import 'blocks/header/header';
+@import 'blocks/home/home';
+@import 'blocks/products/products';
+@import 'blocks/follow/follow';
+@import 'blocks/vendors/vendors';
+@import 'blocks/footer/footer';

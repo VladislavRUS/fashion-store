@@ -1,0 +1,248 @@
+.follow {
+    margin-bottom: 122px;
+    
+    &__wrapper {
+        margin: 0 auto;
+        max-width: 970px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    @mixin size {
+        width: 250px;
+        height: 250px;
+    }
+
+    &__row {
+        display: flex;
+    }
+
+    &__instagram {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        @include size();    
+        background-color: #bc2a8d;
+
+        &:hover &-icon {
+            transform: rotate(360deg);
+        }
+
+        &-message {
+            position: absolute;
+            @include raleway();
+            font-size: 14px;
+            font-weight: 500;
+            color: #000;
+            letter-spacing: 1.4px;
+            transform: rotate(-90deg);
+            left: -125px;
+            bottom: 105px;
+            text-transform: uppercase;
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 50px;
+                height: 1px;
+                background-color: #000;
+                left: -60px;
+                top: 5px;
+            }
+        }
+
+        &-icon {
+            margin-bottom: 16px;
+            width: 41px;
+            height: 41px;
+            transition: transform .4s ease;
+        }
+
+        &-link {
+            @include raleway();
+            font-size: 18px;
+            color: #fff;
+            font-weight: 700;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    
+    &__image {
+        @include size();    
+    }
+
+    &__facebook {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 220px;
+        height: 250px; 
+        background-color: #3a589b;
+
+        &:hover &-icon {
+            transform: translateY(-10px);
+        }
+
+        &-icon {
+            margin-bottom: 19px;
+            width: 21px;
+            height: 43px;
+            transition: transform .4s ease;
+        }
+
+        &-link {
+            text-align: center;
+            max-width: 46px;
+            @include lora();
+            font-size: 16px;
+            color: #fff;
+            font-weight: 700;
+            text-decoration: none;
+            line-height: 24px;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__form {
+        position: relative;
+        width: 470px;
+        height: 250px;
+        text-align: center;
+        background-image: url('../assets/images/follow/form-bg.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    & .form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        position: absolute;
+        left: 20px;
+        right: 20px;
+        top: 20px;
+        bottom: 20px;
+        background-color: transparent;
+        border: 1px solid #d2d2d2;
+
+        &__title {
+            max-width: 278px;
+            margin-bottom: 29px;
+            @include lora();
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 30px;
+            color: #000;
+
+            & .highlight {
+                background-color: #fef200;
+            }
+        }
+
+        &__input {
+            width: 368px;
+            padding: 18px 20px;
+            @include raleway();
+            font-size: 16px;
+            color: #8c8c8c;
+            font-weight: 500;
+            outline: none;
+            border: none;
+
+            &-wrapper {
+                position: relative;
+            }
+
+            &-btn {
+                padding: 0 30px 0 0;
+                position: absolute;
+                top: 50%;
+                right: 20px;
+                transform: translateY(-50%);
+                @include raleway();
+                font-size: 14px;
+                font-weight: 700;
+                color: #1ac8db;
+                background-image: url('../assets/images/follow/arrow.png');
+                background-size: 19px 14px;
+                background-position: 60px 0px;
+                background-repeat: no-repeat;
+                cursor: pointer;
+
+                &:hover {
+                    border-bottom: 1px solid #1ac8db;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .follow {
+        &__wrapper {
+            align-items: center;
+            justify-content: center;
+            padding: 0 20px;
+        }
+
+        &__instagram {
+            margin-bottom: 20px;
+        }
+
+        &__image {
+            margin-bottom: 20px;
+        }
+
+        &__facebook {
+            width: 250px;
+            margin-bottom: 20px;
+        }
+
+        &__row {
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &__form {
+            margin-bottom: 20px;
+            width: 250px;
+            height: 250px;
+        }
+
+        & .form {
+            &__title {
+                max-width: 190px;
+            }
+
+            &__input {
+                padding-right: 10px;
+    
+                &-wrapper {
+                    width: 100%;
+                    padding: 0 20px;
+                }
+    
+                &-btn {
+                    background-image: none;
+                    right: 0px;
+                }
+    
+                width: 186px;
+            }
+        }
+    }
+}

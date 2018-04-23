@@ -1,0 +1,148 @@
+.header {
+    margin-bottom: 133px;
+    
+    &__wrapper {
+        margin: 0 auto;
+        max-width: $page-width;
+    }
+}
+
+.menu {
+    display: flex;
+
+    &__button {
+        display: none;
+        margin-top: 22px;
+        width: 28px;
+        height: 26px;
+        z-index: 10;
+        cursor: pointer;
+        transition: transform .2s ease;
+
+        & path {
+            transition: transform .2s ease;
+        }
+        
+        &._active {
+            transform: translateY(-5px);
+
+            #second, #fourth {
+                transform: scaleX(0);
+            }
+
+            #first {
+                transform: rotate(45deg) translateX(5px);
+            }
+
+            #third {
+                transform: rotate(-45deg) translate(-22px, 3px);
+            }
+        }
+    }
+
+    &__logo {
+        margin-left: auto;
+        margin-right: 95px;
+        width: 230px;
+        height: 70px;
+    }
+
+    &__options {
+        padding-top: 31px;
+    }
+}
+
+.options {
+    display: flex;
+    align-items: center;
+    @include raleway();
+
+    &._active {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        z-index: 5;
+        background-color: #fff;
+    }
+
+    &._active &__item {
+        font-size: 24px;
+        text-transform: uppercase;
+        margin-right: 0;
+        &:not(:last-child) {
+            margin-bottom: 40px;
+        }
+    }
+    
+    &__item {
+        font-size: 16px;
+        font-weight: 400;
+        color: #000;
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        &:not(:last-child) {
+            margin-right: 40px;
+        }
+
+        &-counter {
+            position: relative;
+            top: -2px;
+            display: inline-block;
+            width: 17px;
+            height: 17px;
+            background-color: #c80000;
+            font-size: 12px;
+            color: white;
+            text-align: center;
+            line-height: 17px;
+            border-radius: 50%;
+            font-weight: 500;
+            vertical-align: middle;
+        }
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .header {
+        margin-bottom: 50px;
+        
+        &__wrapper {
+            padding: 0 20px;
+        }
+    }
+
+    .menu {
+        flex-wrap: wrap;
+
+        &__logo {
+            display: none;
+        }
+
+        &__options {
+            margin: 0 auto;
+        }
+    }
+}
+
+@media screen and (max-width: 530px) {
+
+    .menu {
+        &__button {
+            display: block;
+        }
+    }
+
+    .options {
+        display: none;
+    }
+}
