@@ -10,8 +10,8 @@ const htmlmin = require('gulp-htmlmin');
 const imagemin = require('gulp-imagemin');
 const runSequence = require('run-sequence');
 const wait = require('gulp-wait');
+const webserver = require('gulp-webserver');
 
-// Static server
 gulp.task('browser-sync', () =>
     browserSync.init({
         server: {
